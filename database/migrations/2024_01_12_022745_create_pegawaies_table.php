@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('pegawaies', function (Blueprint $table) {
             $table->id();
+            $table->String('image');
+            $table->integer('nip');
+            $table->string('nama', 100);
+            $table->String("jk", 50);
+            $table->string('alamat', 100);
+            $table->string('kota', 100);
+            $table->string('nama_pangkat', 100);
             $table->timestamps();
         });
     }

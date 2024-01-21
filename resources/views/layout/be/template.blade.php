@@ -2,42 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>@yield('title')Web Lanjut</title>
+    <title>@yield('title')Admin</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-    <link href="/backend/css/styles.css" rel="stylesheet" />
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Favicons -->
+    <link href="/frontend/assets/img/favicon.png" rel="icon">
+    <link href="/frontend/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="/frontend/fontawesome/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/frontend/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/frontend/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/frontend/assets/css/style.css" rel="stylesheet">
 </head>
 
-<body class="sb-nav-fixed">
+<body>
 
     @include('layout.be.top-nav')
 
-    <div id="layoutSidenav">
+    @include('layout.be.sidebar')
 
-        @include('layout.be.sidebar')
+    <main id="main" class="main">
 
-        <div id="layoutSidenav_content">
-            <main>
+        @yield('content')
 
-                @yield('content')
+    </main><!-- End #main -->
 
+    @include('layout.be.footer')
 
-            </main>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
-            @include('layout.be.footer')
+    <!-- Vendor JS Files -->
+    <script src="/frontend/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="/frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/frontend/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="/frontend/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="/frontend/assets/vendor/quill/quill.min.js"></script>
+    <script src="/frontend/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="/frontend/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="/frontend/assets/vendor/php-email-form/validate.js"></script>
 
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
-    </script>
+    <!-- Template Main JS File -->
+    <script src="/frontend/assets/js/main.js"></script>
 
-    <script src="/backend/js/scripts.js"></script>
 </body>
 
 </html>
